@@ -1,11 +1,13 @@
 # WhatsApp Contacts and Chats Bypasser
 
 ## 📌 About
-WhatsApp Bypass is a simple and lightweight Android app that allows users to start a WhatsApp chat with any number **without saving it to contacts**. This makes it easy to quickly message businesses, temporary contacts, or people you don't want to add to your phonebook.
+"WhatsApp Bypass" is a simple and lightweight Android app that allows users to start a WhatsApp chat with any number **without saving it to contacts**. This makes it easy to quickly message businesses, temporary contacts, or people you don't want to add to your phonebook.
 
-This was mostly done in protest to Whatsapp's invasive privacy mandate on needing contacts access to start a message.
+This was mostly done in protest to Whatsapp's invasive privacy mandate on needing contacts access to start a message. Only nonstandard Android patches like found in [GrapheneOS](https://grapheneos.org) reduce the privacy implications of this using "Contact Scopes".
 
-I built this app, even though many alternatives exist, simply to test out more of the new android development features. This was quite a fun project and do plan on maintaining this app and continue the developments, like launching it with Signal.
+So this is to help people not on GrapheneOS be more private too.
+
+I built this app, even though many alternatives exist, simply to test out more of the new Android development features. This was quite a fun project and I do plan on maintaining this app and continue development, like adding a button to launch a Signal chat.
 
 ## 🔥 Features
 - **Bypass Contact Saving** – Start WhatsApp chats without adding a number.
@@ -15,14 +17,14 @@ I built this app, even though many alternatives exist, simply to test out more o
 
 ## 📥 Download
 You can download the latest version of the app here:
-- **[GitHub Releases](https://github.com/primalbeing/Whatsapp-Contacts-Chats/releases/download/v1.0.0/app-release.apk)**
+- **[Release 1.0.0](https://github.com/primalbeing/Whatsapp-Contacts-Chats/releases/download/v1.0.0/app-release.apk)**
 
 
 ## 🔧 How to Use
 1. Open the app.
 2. Enter the phone number (with country code, `+1 234 567 8901`).
 3. Tap **"Start WhatsApp Chat"**.
-4. WhatsApp will open directly with the entered number.
+4. WhatsApp will open a chat with the entered number.
 
 ## 🛠 Technical Details
 - **Minimum Android Version:** 5.0 (Lollipop)
@@ -37,5 +39,4 @@ Want to improve this app? Feel free to fork the repository and submit pull reque
 This project is open-source and licensed under the **MIT License**.
 
 ## 🌟 Support & Contact
-For issues, suggestions, or feature requests, please open an issue on here
-
+For issues, suggestions, or feature requests, please [open an issue](https://github.com/primalbeing/Whatsapp-Contacts-Chats/issues/new)
