@@ -13,28 +13,33 @@ import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
-override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
 
-    // Force dark mode permanently
-    delegate.localNightMode = AppCompatDelegate.MODE_NIGHT_YES
+        // Force dark mode permanently
+        delegate.localNightMode = AppCompatDelegate.MODE_NIGHT_YES
 
-    setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main)
 
-    val phoneInput = findViewById<EditText>(R.id.phoneInput)
-    val openWhatsAppBtn = findViewById<Button>(R.id.openWhatsAppBtn)
+        val phoneInput = findViewById<EditText>(R.id.phoneInput)
+        val openWhatsAppBtn = findViewById<Button>(R.id.openWhatsAppBtn)
 
-    openWhatsAppBtn.setOnClickListener {
-        val phoneNumber = phoneInput.text.toString().trim()
+        openWhatsAppBtn.setOnClickListener {
+            val rawNumber = phoneInput.text.toString().trim()
+            val cleanedNumber = cleanPhoneNumber(rawNumber)
 
-        if (validateNumber(phoneNumber)) {
-            startWhatsAppChat(phoneNumber)
-        } else {
-            Toast.makeText(this, "Invalid phone number!", Toast.LENGTH_SHORT).show()
+            if (validateNumber(cleanedNumber)) {
+                startWhatsAppChat(cleanedNumber)
+            } else {
+                Toast.makeText(this, "Invalid phone number!", Toast.LENGTH_SHORT).show()
+            }
         }
     }
-}
 
+    private fun cleanPhoneNumber(number: String): String {
+        // Remove all spaces and dashes from the input
+        return number.replace("[\\s\\-]".toRegex(), "")
+    }
 
     private fun validateNumber(number: String): Boolean {
         return number.isNotEmpty() && number.matches(Regex("^[+]?[0-9]{10,15}\$"))
