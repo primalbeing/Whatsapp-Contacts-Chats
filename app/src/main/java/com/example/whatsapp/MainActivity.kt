@@ -1,5 +1,7 @@
 package com.example.whatsapp
 
+import androidx.appcompat.app.AppCompatDelegate
+import android.content.res.Configuration
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.net.Uri
@@ -11,23 +13,28 @@ import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
 
-        val phoneInput = findViewById<EditText>(R.id.phoneInput)
-        val openWhatsAppBtn = findViewById<Button>(R.id.openWhatsAppBtn)
+    // Force dark mode permanently
+    delegate.localNightMode = AppCompatDelegate.MODE_NIGHT_YES
 
-        openWhatsAppBtn.setOnClickListener {
-            val phoneNumber = phoneInput.text.toString().trim()
+    setContentView(R.layout.activity_main)
 
-            if (validateNumber(phoneNumber)) {
-                startWhatsAppChat(phoneNumber)
-            } else {
-                Toast.makeText(this, "Invalid phone number!", Toast.LENGTH_SHORT).show()
-            }
+    val phoneInput = findViewById<EditText>(R.id.phoneInput)
+    val openWhatsAppBtn = findViewById<Button>(R.id.openWhatsAppBtn)
+
+    openWhatsAppBtn.setOnClickListener {
+        val phoneNumber = phoneInput.text.toString().trim()
+
+        if (validateNumber(phoneNumber)) {
+            startWhatsAppChat(phoneNumber)
+        } else {
+            Toast.makeText(this, "Invalid phone number!", Toast.LENGTH_SHORT).show()
         }
     }
+}
+
 
     private fun validateNumber(number: String): Boolean {
         return number.isNotEmpty() && number.matches(Regex("^[+]?[0-9]{10,15}\$"))
