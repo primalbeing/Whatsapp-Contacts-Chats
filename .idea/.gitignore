@@ -1,3 +1,30 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+# Ignore Keystore Files (Important)
+*.jks
+*.keystore
+
+# Ignore Local Gradle and Build Files
+/.gradle/
+/build/
+/app/build/
+/local.properties
+
+# Ignore APK and AAB files
+*.apk
+*.aab
+
+# Ignore IDE and OS-specific Files
+/.idea/
+/*.iml
+.DS_Store
+
+# Ignore Logs and Generated Files
+*.log
+*.cache
+*.class
+
+# Ignore Sensitive Config Files
+secrets.properties
+google-services.json

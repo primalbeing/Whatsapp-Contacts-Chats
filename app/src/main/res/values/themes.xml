@@ -8,6 +8,5 @@
         <item name="colorOnSecondary">@color/black</item>
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <item name="android:windowBackground">#121212</item> <!-- Dark Grey Background -->
-        <item name="android:forceDarkAllowed">false</item> <!-- Stops any light mode overrides -->
     </style>
 </resources>

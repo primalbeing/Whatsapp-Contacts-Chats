@@ -13,8 +13,16 @@ android {
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        create("release") {
+            storeFile = file("my-release-key.jks")
+            storePassword = "thankyoupenguin"
+            keyAlias = "my-key-alias"
+            keyPassword = "thankyoupenguin"
+        }
     }
 
     buildTypes {
@@ -24,8 +32,10 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            signingConfig = signingConfigs.getByName("release")
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17 // Use latest stable version
         targetCompatibility = JavaVersion.VERSION_17
