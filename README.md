@@ -17,7 +17,7 @@ I built this app, even though many alternatives exist, simply to test out more o
 
 ## 📥 Download
 You can download the latest version of the app here:
-- **[Release 1.0.0](https://github.com/primalbeing/Whatsapp-Contacts-Chats/releases/download/v1.1.0/app-release.apk)**
+- **[Release 1.1.0](https://github.com/primalbeing/Whatsapp-Contacts-Chats/releases/download/v1.1.0/app-release.apk)**
 
 
 ## 🔧 How to Use
