@@ -12,16 +12,16 @@ android {
         minSdk = 21
         targetSdk = 35
         versionCode = 1
-        versionName = "1.0"
+        versionName = "1.1.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     signingConfigs {
         create("release") {
-            storeFile = file("my-release-key.jks")
-            storePassword = "thankyoupenguin"
+            storeFile = file("new-release-key.jks")
+            storePassword = "ileakedmyownkeys"
             keyAlias = "my-key-alias"
-            keyPassword = "thankyoupenguin"
+            keyPassword = "ileakedmyownkeys"
         }
     }
 
