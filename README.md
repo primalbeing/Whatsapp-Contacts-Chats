@@ -3,7 +3,7 @@
 ## 📌 About
 "WhatsApp Bypass" is a simple and lightweight Android app that allows users to start a WhatsApp chat with any number **without saving it to contacts**. This makes it easy to quickly message businesses, temporary contacts, or people you don't want to add to your phonebook.
 
-This was mostly done in protest to Whatsapp's invasive privacy mandate on needing contacts access to start a message. Only nonstandard Android patches like found in [GrapheneOS](https://grapheneos.org) reduce the privacy implications of this using "Contact Scopes".
+This was mostly done in protest to Whatsapp's invasive privacy mandate on needing contacts access to start a message. Only nonstandard Android patches like found in [GrapheneOS](https://grapheneos.org) reduce the privacy implications of this using "Contact Scopes". This is also useful for connected devices, since you cannot add new contacts with them anyway.
 
 So this is to help people not on GrapheneOS be more private too.
 
@@ -17,7 +17,7 @@ I built this app, even though many alternatives exist, simply to test out more o
 
 ## 📥 Download
 You can download the latest version of the app here:
-- **[Release 1.0.0](https://github.com/primalbeing/Whatsapp-Contacts-Chats/releases/download/v1.0.0/app-release.apk)**
+- **[Release 1.0.0](https://github.com/primalbeing/Whatsapp-Contacts-Chats/releases/download/v1.1.0/app-release.apk)**
 
 
 ## 🔧 How to Use
